@@ -15,7 +15,7 @@ defmodule Ip.Routers do
   end
 
   get "/ip" do
-    ip = Enum.join(Tuple.to_list(conn.remote_ip), ".")
+    ip = Enum.find(conn.req_headers, fn {k, _} -> k == "x-forwarded-for" end) |> elem(1)
     send_resp(conn, 200, ip)
   end
 
