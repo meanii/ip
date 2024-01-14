@@ -1,6 +1,6 @@
-# Ip
+# Ip 
 
-** This API, built with Elixir, provides a fast and reliable method for retrieving public IP information. **
+*This API, built with Elixir, provides a fast and reliable method for retrieving public IP information.*
 
 ## Usage
 
