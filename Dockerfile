@@ -20,7 +20,7 @@ RUN mix release
 FROM elixir:1.15-alpine
 
 COPY --from=build /app/_build/prod/rel/ip /release/ip
-ENTRYPOINT [ "/release/ip/bin/ip" ]
+CMD [ "/release/ip/bin/ip", "start" ]
 
 # expose port
 EXPOSE 4000
