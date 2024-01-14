@@ -1,21 +1,11 @@
 # Ip
 
-**TODO: Add description**
+** This API, built with Elixir, provides a fast and reliable method for retrieving public IP information. **
 
-## Installation
+## Usage
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `ip` to your list of dependencies in `mix.exs`:
+### Get IP information
 
-```elixir
-def deps do
-  [
-    {:ip, "~> 0.1.0"}
-  ]
-end
+```bash
+curl https://ip.meanii.dev/ip
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/ip>.
-
