@@ -11,16 +11,18 @@ defmodule Ip.Routers do
 
 
   get "/" do
-    send_resp(conn, 200, "sup?")
+    ip = Utils.Misc.get_ip(conn)
+    send_resp(conn, 200, ip)
   end
 
   get "/ip" do
-    ip = Enum.find(conn.req_headers, fn {k, _} -> k == "x-forwarded-for" end) |> elem(1)
+    ip = Utils.Misc.get_ip(conn)
     send_resp(conn, 200, ip)
   end
 
   match _ do
-    send_resp(conn, 404, "sup?")
+    ip = Utils.Misc.get_ip(conn)
+    send_resp(conn, 200, ip)
   end
 
 end
