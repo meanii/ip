@@ -1,0 +1,7 @@
+services:
+  api:
+    build: .
+    ports:
+      - 40004000"
+    container_name: ip-meanii
+    restart: unless-stopped
